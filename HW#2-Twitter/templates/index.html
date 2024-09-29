@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Mastodon Service UI</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mastodon Service</h1>
+
+        <h2>Create a Post</h2>
+        <form id="createPostForm">
+            <textarea id="postText" placeholder="Enter your post"></textarea>
+            <button type="submit">Create Post</button>
+        </form>
+        <div id="createResult"></div>
+
+        <h2>Retrieve a Post</h2>
+        <form id="retrievePostForm">
+            <input type="number" id="retrievePostId" placeholder="Enter post ID">
+            <button type="submit">Retrieve Post</button>
+        </form>
+        <div id="retrieveResult"></div>
+
+        <h2>Delete a Post</h2>
+        <form id="deletePostForm">
+            <input type="number" id="deletePostId" placeholder="Enter post ID">
+            <button type="submit">Delete Post</button>
+        </form>
+        <div id="deleteResult"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
